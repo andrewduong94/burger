@@ -1,4 +1,13 @@
+
+
 <h1>Burgers</h1>
+
+<div class="containers">
+
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-4">
+        <div class="burgerbox">
 
 <h2>Order</h2>
 
@@ -6,23 +15,45 @@
     {{#each burgers}}
         {{#unless devoured}}
            <li>{{burger_name}}
-               	<button class="changeDevour" data-id="{{id}}">
-		            Devour!
+               &nbsp;
+               	<button class="changeDevour btn btn-outline-dark btn-sm" data-id="{{id}}">
+		            Eat!
 	            </button>
            </li> 
+           <br>
         {{/unless}}
     {{/each}}
 </ul>
 
+        </div>
+
+    </div>
+    <div class="col-md-2">
+        <img src="https://cdn.iconscout.com/public/images/icon/premium/png-512/food-burger-fast-hamburger-eat-3cbb9cf10eb93a6c-512x512.png" height="150" width="150" alt="Burger">
+    </div>
+    <div class="col-md-4">
+        <div class="burgerbox">
 <h2>Devoured</h2>
 
 <ul>
     {{#each burgers}}
         {{#if devoured}}
             <li>{{burger_name}}</li>
+            <br>
         {{/if}}
     {{/each}}
 </ul>
+
+        </div>
+    </div>
+
+</div>
+
+<br>
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 formBox">
 
 <h2>Order a burger</h2>
 <form class="create-form">
@@ -30,7 +61,12 @@
     <div class="form-group">
         <label for="burger">Burger Name:</label>
         <input type="text" id="burger" name="name">
+         <button type="submit" class="btn btn-outline-dark">Order</button>
     </div>
 
-    <button type="submit">Order</button>
 </form>
+    </div>
+
+</div>
+
+</div>
